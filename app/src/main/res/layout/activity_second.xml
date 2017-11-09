@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.flora.datawriting.SecondActivity"
+    android:background="@drawable/bg">
+
+
+
+    <EditText
+        android:id="@+id/etMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv"
+        android:layout_above="@+id/table"
+        android:textSize="20dp"
+        android:layout_alignRight="@+id/table"
+        android:layout_alignLeft="@id/table"
+        android:layout_marginBottom="30dp"/>
+
+    <TextView
+        android:id="@+id/Filename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etMessage"
+        android:layout_alignLeft="@+id/table"
+        android:textSize="20dp"
+        android:text="Filename: "/>
+
+    <EditText
+        android:id="@+id/filename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/Filename"
+        android:layout_above="@+id/etMessage"
+        android:textSize="20dp"
+        android:layout_alignRight="@+id/table"/>
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp">
+
+        <Button
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/holo_blue_bright"
+            android:text="shared preferences"
+            android:onClick="displayPreferences"/>
+
+        <Button
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/holo_blue_bright"
+            android:text="Internal Storage"
+            android:onClick="displayStorage"/>
+
+        <Button
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/holo_blue_bright"
+            android:text="internal Cache"
+            android:onClick="loadInternalCache"
+            />
+
+        <Button
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/holo_blue_bright"
+            android:text="external cache"
+            android:onClick="loadExternalCache"
+            />
+
+        <Button
+
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/holo_blue_bright"
+            android:text="external storage"
+            android:onClick="loadExternalStorage"
+            />
+
+        <Button
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/holo_blue_bright"
+            android:text="external public storage"
+            android:onClick="loadExternalPublicStorage"
+            />
+
+        <Button
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/holo_blue_bright"
+            android:text="Back"
+            android:onClick="previous"
+            />
+
+    </TableLayout>
+
+</RelativeLayout>
